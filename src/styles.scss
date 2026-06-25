@@ -1,0 +1,341 @@
+@use '@angular/material' as mat;
+
+// ============================================================
+// PTP THEME — Polskie Towarzystwo Psychoanalityczne
+// Angular Material 22 + Material Design 3
+// Base palette: $rose-palette (closest to #C89696 brand rose)
+// ============================================================
+
+html {
+  height: 100%;
+
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$rose-palette,
+        tertiary: mat.$green-palette,
+      ),
+      typography: (
+        plain-family: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+        brand-family: '"Playfair Display", Georgia, "Times New Roman", serif',
+        bold-weight: 700,
+        medium-weight: 500,
+        regular-weight: 400,
+      ),
+      density: 0,
+    )
+  );
+
+  // ---- Override color tokens to exact PTP brand values ----
+  // Primary: dark rose, WCAG AA (~6.5:1 on white)
+  --mat-sys-primary: #7D5252;
+  --mat-sys-on-primary: #FFFFFF;
+  --mat-sys-primary-container: #FFDAD9;
+  --mat-sys-on-primary-container: #3B0A0A;
+  --mat-sys-primary-fixed: #FFDAD9;
+  --mat-sys-primary-fixed-dim: #F0B5B4;
+  --mat-sys-on-primary-fixed: #3B0A0A;
+  --mat-sys-on-primary-fixed-variant: #623E3E;
+  --mat-sys-inverse-primary: #F0B5B4;
+
+  // Secondary: warm taupe
+  --mat-sys-secondary: #6B5757;
+  --mat-sys-on-secondary: #FFFFFF;
+  --mat-sys-secondary-container: #EDD8D8;
+  --mat-sys-on-secondary-container: #261818;
+  --mat-sys-secondary-fixed: #EDD8D8;
+  --mat-sys-secondary-fixed-dim: #D0BCBC;
+  --mat-sys-on-secondary-fixed: #261818;
+  --mat-sys-on-secondary-fixed-variant: #524242;
+
+  // Tertiary: sage green (academic, calm)
+  --mat-sys-tertiary: #576357;
+  --mat-sys-on-tertiary: #FFFFFF;
+  --mat-sys-tertiary-container: #D4EBD1;
+  --mat-sys-on-tertiary-container: #182118;
+  --mat-sys-tertiary-fixed: #D4EBD1;
+  --mat-sys-tertiary-fixed-dim: #B8CFB6;
+  --mat-sys-on-tertiary-fixed: #182118;
+  --mat-sys-on-tertiary-fixed-variant: #3F4C3F;
+
+  // Error (standard MD3)
+  --mat-sys-error: #B3261E;
+  --mat-sys-on-error: #FFFFFF;
+  --mat-sys-error-container: #FFDAD6;
+  --mat-sys-on-error-container: #410002;
+
+  // Background & Surface: warm cream #FFF6F4
+  --mat-sys-background: #FFF6F4;
+  --mat-sys-on-background: #1F1717;
+  --mat-sys-surface: #FFF6F4;
+  --mat-sys-on-surface: #1F1717;
+  --mat-sys-surface-variant: #F0E0DF;
+  --mat-sys-on-surface-variant: #524343;
+  --mat-sys-surface-bright: #FFF6F4;
+  --mat-sys-surface-dim: #E3D3D3;
+  --mat-sys-inverse-surface: #362D2D;
+  --mat-sys-inverse-on-surface: #FBEEEE;
+
+  // Surface containers (tonal hierarchy)
+  --mat-sys-surface-container-lowest: #FFFFFF;
+  --mat-sys-surface-container-low: #FFF0EF;
+  --mat-sys-surface-container: #F9EAEA;
+  --mat-sys-surface-container-high: #F3E4E3;
+  --mat-sys-surface-container-highest: #EDDDDD;
+
+  // Outline
+  --mat-sys-outline: #857070;
+  --mat-sys-outline-variant: #D5C3C3;
+
+  // Scrim
+  --mat-sys-scrim: rgba(0, 0, 0, 0.5);
+  --mat-sys-shadow: rgba(0, 0, 0, 0.08);
+
+  // ---- PTP brand accent (decorative, large elements only) ----
+  --ptp-color-brand: #C89696;
+
+  // ---- Custom PTP layout tokens ----
+  --ptp-layout-max-width: 1280px;
+  --ptp-layout-article-max: 680px;
+  --ptp-layout-form-max: 560px;
+  --ptp-layout-page-padding: 32px;
+  --ptp-layout-section-gap: 80px;
+  --ptp-layout-gutter: 24px;
+
+  // ---- Z-index scale ----
+  --ptp-z-raised: 10;
+  --ptp-z-dropdown: 100;
+  --ptp-z-sticky: 200;
+  --ptp-z-modal: 400;
+  --ptp-z-toast: 500;
+}
+
+// ============================================================
+// Skip link (WCAG 2.4.1)
+// ============================================================
+
+.ptp-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 12px 24px;
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+// ============================================================
+// Global focus-visible ring (WCAG 2.4.7 — all interactive elements)
+// ============================================================
+
+:focus-visible {
+  outline: 3px solid var(--mat-sys-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+// Angular Material components handle focus internally — only supplement
+// where Material doesn't apply its own focus indicator
+.mat-mdc-button:focus-visible,
+.mat-mdc-icon-button:focus-visible,
+.mat-mdc-outlined-button:focus-visible {
+  outline: none; // Material handles it via state layer
+}
+
+a:focus-visible {
+  outline: 3px solid var(--mat-sys-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+// ============================================================
+// Base body styles
+// ============================================================
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ============================================================
+// Typography overrides — Playfair Display for headings
+// ============================================================
+
+h1, h2, h3, h4,
+.mat-display-large,
+.mat-display-medium,
+.mat-display-small,
+.mat-headline-large,
+.mat-headline-medium,
+.mat-headline-small {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+// ============================================================
+// Angular Material component overrides
+// ============================================================
+
+// Toolbar — use surface-container-low for subtle warmth
+.mat-toolbar {
+  background-color: var(--mat-sys-surface-container-low);
+  color: var(--mat-sys-on-surface);
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+// Card elevation — slight tonal warmth
+.mat-mdc-card {
+  --mdc-elevated-card-container-color: var(--mat-sys-surface-container-lowest);
+}
+
+// Sidenav — warm background
+.mat-sidenav {
+  background-color: var(--mat-sys-surface-container-low);
+}
+
+.mat-sidenav-container {
+  background-color: var(--mat-sys-surface);
+}
+
+// Form fields — PTP shape (small = 8px corners for inputs)
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-filled-text-field-container-shape: 8px 8px 0 0;
+}
+
+// Chips — pill shape
+.mat-mdc-chip {
+  --mdc-chip-container-shape-radius: 8px;
+}
+
+// Buttons — 48dp touch targets (MD3 + WCAG 2.5.5)
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button,
+.mat-mdc-unelevated-button {
+  min-height: 48px;
+}
+
+// Icon buttons — 48dp touch target (WCAG 2.5.5)
+// Angular Material 22 uses --mat-icon-button-state-layer-size (not the MDC variant)
+.mat-mdc-icon-button {
+  --mdc-icon-button-state-layer-size: 48px;
+  --mat-icon-button-state-layer-size: 48px;
+}
+
+// Filled tonal button — MD3 secondary-container role
+// Angular Material 22 uses --mat-button-filled-* (not --mdc-filled-button-*)
+.ptp-btn-tonal {
+  --mat-button-filled-container-color: var(--mat-sys-secondary-container);
+  --mat-button-filled-label-text-color: var(--mat-sys-on-secondary-container);
+  --mat-filled-button-state-layer-color: var(--mat-sys-on-secondary-container);
+  --mat-filled-button-ripple-color: color-mix(in srgb, var(--mat-sys-on-secondary-container) 12%, transparent);
+}
+
+// Chip — larger tap target via min-height (chips are 32dp per MD3 spec but need accessible tap area)
+.mat-mdc-chip {
+  --mdc-chip-container-height: 32px;
+  padding-block: 6px; // increases tap area without changing visual chip size
+}
+
+// Tabs
+.mat-mdc-tab-group {
+  --mdc-secondary-navigation-tab-container-height: 48px;
+}
+
+// Snackbar — use inverse surface for toast
+.mdc-snackbar__surface {
+  background-color: var(--mat-sys-inverse-surface) !important;
+  color: var(--mat-sys-inverse-on-surface) !important;
+}
+
+// Dialog
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  --mdc-dialog-container-shape: 28px;
+}
+
+// Progress spinner — use brand color
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: var(--mat-sys-primary);
+}
+
+// Paginator
+.mat-mdc-paginator {
+  background-color: var(--mat-sys-surface-container-low);
+}
+
+// ============================================================
+// Utility classes
+// ============================================================
+
+.ptp-display-font {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.ptp-body-font {
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.ptp-surface-container {
+  background-color: var(--mat-sys-surface-container);
+}
+
+.ptp-text-primary {
+  color: var(--mat-sys-primary);
+}
+
+.ptp-text-on-surface-variant {
+  color: var(--mat-sys-on-surface-variant);
+}
+
+// ============================================================
+// Responsive layout helpers
+// ============================================================
+
+.ptp-page-container {
+  max-width: var(--ptp-layout-max-width);
+  margin: 0 auto;
+  padding: 0 var(--ptp-layout-page-padding);
+}
+
+.ptp-article-container {
+  max-width: var(--ptp-layout-article-max);
+  margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  :root {
+    --ptp-layout-page-padding: 16px;
+    --ptp-layout-section-gap: 48px;
+    --ptp-layout-gutter: 16px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 904px) {
+  :root {
+    --ptp-layout-page-padding: 24px;
+    --ptp-layout-section-gap: 64px;
+  }
+}
