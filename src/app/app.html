@@ -29,19 +29,213 @@
 
     <!-- Header -->
     <header class="ptp-header" role="banner">
+      <!-- Top utility bar -->
+      <div class="ptp-topbar">
+        <div class="ptp-topbar-inner ptp-page-container">
+          <div class="ptp-topbar-left"></div>
+          <div class="ptp-topbar-right">
+            <div class="ptp-lang-switcher">
+              <a href="#" class="ptp-lang-btn ptp-lang-btn--active" aria-current="true">PL</a>
+              <span class="ptp-lang-sep">|</span>
+              <a href="#" class="ptp-lang-btn">EN</a>
+            </div>
+            <a href="#" class="ptp-topbar-contact">Kontakt</a>
+            <button mat-icon-button class="ptp-topbar-icon" aria-label="Moje konto">
+              <mat-icon>person_outline</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main navbar -->
       <div class="ptp-header-inner ptp-page-container">
         <!-- Logo -->
         <a href="/" class="ptp-logo-link" aria-label="Polskie Towarzystwo Psychoanalityczne — strona główna">
-          <span class="ptp-logo-text" aria-hidden="true">PTP<em>a</em></span>
+          <img src="logo.svg" alt="PTPa" class="ptp-logo-img" height="36">
         </a>
 
         <!-- Desktop nav -->
         <nav class="ptp-header-nav" aria-label="Nawigacja główna">
-          <a mat-button href="#">Towarzystwo</a>
-          <a mat-button href="#">Aktualności</a>
-          <a mat-button href="#">Psychoanaliza</a>
-          <a mat-button href="#">Biblioteka i Media</a>
-          <a mat-button href="#">Szkolenie</a>
+
+          <div class="ptp-nav-item ptp-nav-item--mega">
+            <a class="ptp-nav-link" href="#">Towarzystwo</a>
+            <div class="ptp-mega-menu" role="menu">
+              <div class="ptp-mega-menu__inner">
+
+                <!-- Featured left panel -->
+                <a href="#" class="ptp-mega-featured" role="menuitem">
+                  <span class="ptp-mega-featured__label">O nas</span>
+                  <strong class="ptp-mega-featured__title">Polskie Towarzystwo Psychoanalityczne</strong>
+                  <p class="ptp-mega-featured__desc">Zrzeszamy psychoanalityków i psychoterapeutów w Polsce od 1989 roku.</p>
+                  <span class="ptp-mega-featured__cta">Dowiedz się więcej <mat-icon>arrow_forward</mat-icon></span>
+                </a>
+
+                <!-- Divider -->
+                <div class="ptp-mega-divider" aria-hidden="true"></div>
+
+                <!-- Navigation grid -->
+                <div class="ptp-mega-links" role="group">
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>gavel</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Kodeks Etyczny</span>
+                      <span class="ptp-mega-item__desc">Standardy merytoryczne i etyczne</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>account_balance</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Władze</span>
+                      <span class="ptp-mega-item__desc">Zarząd, Komisje oraz Podkomisje</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>verified_user</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Członkowie</span>
+                      <span class="ptp-mega-item__desc">Licencjonowani psychoanalitycy</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>school</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Kandydaci</span>
+                      <span class="ptp-mega-item__desc">W trakcie szkolenia psychoanalitycznego</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>military_tech</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Członkowie honorowi</span>
+                      <span class="ptp-mega-item__desc">Osoby zasłużone dla Towarzystwa</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>favorite_border</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Pożegnania</span>
+                      <span class="ptp-mega-item__desc">Wspomnienia o zmarłych członkach PTPa</span>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="ptp-nav-item ptp-nav-item--mega">
+            <a class="ptp-nav-link" href="#">Aktualności</a>
+            <div class="ptp-mega-menu" role="menu">
+              <div class="ptp-mega-menu__inner">
+
+                <!-- Featured left panel -->
+                <a href="#" class="ptp-mega-featured" role="menuitem">
+                  <span class="ptp-mega-featured__label">Aktualności</span>
+                  <strong class="ptp-mega-featured__title">Wydarzenia<br>i komunikaty PTPa</strong>
+                  <p class="ptp-mega-featured__desc">Wykłady, konferencje, kursy i wszystkie aktualności Towarzystwa.</p>
+                  <span class="ptp-mega-featured__cta">Wszystkie aktualności <mat-icon>arrow_forward</mat-icon></span>
+                </a>
+
+                <!-- Divider -->
+                <div class="ptp-mega-divider" aria-hidden="true"></div>
+
+                <!-- Navigation grid -->
+                <div class="ptp-mega-links ptp-mega-links--3row" role="group">
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>grid_view</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Wszystkie wydarzenia</span>
+                      <span class="ptp-mega-item__desc">Organizowane przez Towarzystwo</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>mic</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Wykłady</span>
+                      <span class="ptp-mega-item__desc">Wykłady otwarte PTPa</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>event</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Seminaria</span>
+                      <span class="ptp-mega-item__desc">Otwarte seminaria PTPa</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>school</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Kursy</span>
+                      <span class="ptp-mega-item__desc">Kursy psychoanalityczne</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>groups_2</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Konferencje</span>
+                      <span class="ptp-mega-item__desc">Konferencje PTPa</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>forum</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Sympozja</span>
+                      <span class="ptp-mega-item__desc">Sympozja PTPa</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>wb_sunny</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Letnia szkoła psychoanalizy</span>
+                      <span class="ptp-mega-item__desc">Letnie wydarzenie promujące psychoanalizę</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>info_outline</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Komunikaty</span>
+                      <span class="ptp-mega-item__desc">Aktualności w Towarzystwie</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>menu_book</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Publikacje</span>
+                      <span class="ptp-mega-item__desc">Publikacje Towarzystwa</span>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="ptp-nav-item ptp-nav-item--mega">
+            <a class="ptp-nav-link" href="#">Psychoanaliza</a>
+            <div class="ptp-mega-menu" role="menu">
+              <div class="ptp-mega-menu__inner ptp-mega-menu__inner--no-featured">
+                <div class="ptp-mega-links ptp-mega-links--1row" role="group">
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>psychology</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">O psychoanalizie</span>
+                      <span class="ptp-mega-item__desc">Teoria funkcjonowania ludzkiego umysłu</span>
+                    </div>
+                  </a>
+                  <a href="#" class="ptp-mega-item" role="menuitem">
+                    <div class="ptp-mega-item__icon"><mat-icon>person_search</mat-icon></div>
+                    <div class="ptp-mega-item__text">
+                      <span class="ptp-mega-item__title">Znajdź psychoanalityka</span>
+                      <span class="ptp-mega-item__desc">Znajdź doświadczonych psychoanalityków</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="ptp-nav-link" href="#">Biblioteka i Media</a>
+          <a class="ptp-nav-link" href="#">Szkolenie</a>
         </nav>
 
         <!-- Mobile hamburger -->
@@ -53,7 +247,23 @@
           <mat-icon>menu</mat-icon>
         </button>
       </div>
+
     </header>
+
+    <!-- Announcement banner (outside sticky header) -->
+    @if (announcementVisible) {
+    <div class="ptp-announcement" role="status" aria-live="polite">
+      <div class="ptp-page-container ptp-announcement-inner">
+        <a href="#" class="ptp-announcement__text">
+          <strong>Komunikat:</strong> Bezpłatna pomoc psychologiczna dla uchodźców.
+        </a>
+        <button mat-icon-button class="ptp-announcement__close" aria-label="Zamknij komunikat"
+                (click)="announcementVisible = false">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+    }
 
     <main id="ptp-main-content">
 
@@ -104,7 +314,7 @@
       </div>
 
       <!-- ───────── WYDARZENIA ───────── -->
-      <section class="ptp-section ptp-section--tinted" aria-labelledby="events-heading">
+      <section class="ptp-section ptp-section--white" aria-labelledby="events-heading">
         <div class="ptp-page-container">
           <div class="ptp-section-header">
             <div>
@@ -123,58 +333,93 @@
             <mat-chip-option class="ptp-filter-chip">Warsztaty</mat-chip-option>
           </mat-chip-listbox>
 
-          <div class="ptp-event-grid" role="list">
+          <div class="ptp-carousel-outer">
+            <div class="ptp-event-carousel" id="eventCarousel" role="list">
 
-            <article class="ptp-event-card" role="listitem">
-              <div class="ptp-event-card__image ptp-event-card__image--1" aria-hidden="true"></div>
-              <div class="ptp-event-card__body">
-                <span class="ptp-label ptp-label--rose">Letnia Szkoła Psychoanalizy</span>
-                <h3 class="ptp-event-card__title">Ciało, Seksualność, Sztuczna Doskonałość</h3>
-                <p class="ptp-event-card__desc">
-                  Polskie Towarzystwo Psychoanalityczne zaprasza na III edycję Letniej Szkoły Psychoanalizy,
-                  która odbędzie się w przestrzeni Starego BUW-u w Warszawie.
-                </p>
-                <div class="ptp-event-card__meta">
-                  <span class="ptp-meta-item">
-                    <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                    18–20 września 2026
-                  </span>
-                  <span class="ptp-meta-item">
-                    <mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>
-                    Na miejscu
-                  </span>
+              <article class="ptp-event-card" role="listitem">
+                <div class="ptp-event-card__image ptp-event-card__image--1">
+                  <span class="ptp-label ptp-label--rose">Letnia Szkoła Psychoanalizy</span>
                 </div>
-              </div>
-            </article>
-
-            <article class="ptp-event-card" role="listitem">
-              <div class="ptp-event-card__image ptp-event-card__image--2" aria-hidden="true"></div>
-              <div class="ptp-event-card__body">
-                <span class="ptp-label ptp-label--sage">Kurs</span>
-                <h3 class="ptp-event-card__title">Jak powstaje życie psychiczne. Podstawowe idee Melanie Klein.</h3>
-                <p class="ptp-event-card__desc">
-                  Chcemy zaprosić Państwa do wspólnej podróży, podczas której poznawać będziemy teorię
-                  wybitnej psychoanalityczki związanej z Brytyjskim Towarzystwem Ps…
-                </p>
-                <div class="ptp-event-card__meta">
-                  <span class="ptp-meta-item">
-                    <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                    03 października 2026
-                  </span>
-                  <span class="ptp-meta-item">
-                    <mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>
-                    Na miejscu
-                  </span>
+                <div class="ptp-event-card__body">
+                  <h3 class="ptp-event-card__title">Ciało, Seksualność, Sztuczna Doskonałość</h3>
+                  <p class="ptp-event-card__desc">
+                    Polskie Towarzystwo Psychoanalityczne zaprasza na III edycję Letniej Szkoły Psychoanalizy,
+                    która odbędzie się w przestrzeni Starego BUW-u w Warszawie.
+                  </p>
+                  <div class="ptp-event-card__footer">
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>18–20 września 2026</span>
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>Na miejscu</span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
+              <article class="ptp-event-card" role="listitem">
+                <div class="ptp-event-card__image ptp-event-card__image--2">
+                  <span class="ptp-label ptp-label--sage">Kurs</span>
+                </div>
+                <div class="ptp-event-card__body">
+                  <h3 class="ptp-event-card__title">Jak powstaje życie psychiczne. Podstawowe idee Melanie Klein.</h3>
+                  <p class="ptp-event-card__desc">
+                    Chcemy zaprosić Państwa do wspólnej podróży, podczas której poznawać będziemy teorię
+                    wybitnej psychoanalityczki związanej z Brytyjskim Towarzystwem Psychoanalitycznym.
+                  </p>
+                  <div class="ptp-event-card__footer">
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>03 października 2026</span>
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>Na miejscu</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ptp-event-card" role="listitem">
+                <div class="ptp-event-card__image ptp-event-card__image--3">
+                  <span class="ptp-label ptp-label--rose">Wykład otwarty</span>
+                </div>
+                <div class="ptp-event-card__body">
+                  <h3 class="ptp-event-card__title">Psychoanaliza wobec kryzysu klimatycznego</h3>
+                  <p class="ptp-event-card__desc">
+                    Zapraszamy na wykład otwarty poświęcony psychoanalitycznym perspektywom rozumienia
+                    lęku ekologicznego, żałoby klimatycznej i zbiorowej odpowiedzi na kryzys.
+                  </p>
+                  <div class="ptp-event-card__footer">
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>15 listopada 2026</span>
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>Online</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ptp-event-card" role="listitem">
+                <div class="ptp-event-card__image ptp-event-card__image--4">
+                  <span class="ptp-label ptp-label--sage">Konferencja</span>
+                </div>
+                <div class="ptp-event-card__body">
+                  <h3 class="ptp-event-card__title">Konferencja Europejskiego Towarzystwa Psychoanalizy 2027</h3>
+                  <p class="ptp-event-card__desc">
+                    Coroczna konferencja EPF poświęcona współczesnym wyzwaniom w praktyce i teorii
+                    psychoanalitycznej. Tegoroczne hasło: „Tożsamość i transformacja".
+                  </p>
+                  <div class="ptp-event-card__footer">
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>14–16 marca 2027</span>
+                    <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>Warszawa</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="ptp-carousel-nav">
+            <button mat-icon-button aria-label="Poprzednie" (click)="scrollCarousel('eventCarousel', 'prev')">
+              <mat-icon>chevron_left</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Następne" (click)="scrollCarousel('eventCarousel', 'next')">
+              <mat-icon>chevron_right</mat-icon>
+            </button>
           </div>
         </div>
       </section>
 
       <!-- ───────── KOMUNIKATY ───────── -->
-      <section class="ptp-section" aria-labelledby="komunikaty-heading">
+      <section class="ptp-section ptp-section--cream" aria-labelledby="komunikaty-heading">
         <div class="ptp-page-container">
           <div class="ptp-section-header">
             <div>
@@ -184,65 +429,71 @@
             <a mat-stroked-button href="#" class="ptp-see-all-btn">Zobacz wszystkie komunikaty</a>
           </div>
 
-          <div class="ptp-komunikaty-grid" role="list">
+          <div class="ptp-carousel-outer">
+            <div class="ptp-komunikaty-carousel" id="komunikatyCarousel" role="list">
 
-            <article class="ptp-komunikat-card" role="listitem">
-              <h3 class="ptp-komunikat-card__title">Pan Profesor Paweł Dybel nowym Członkiem Honorowym w PTPa</h3>
-              <p class="ptp-komunikat-card__desc">
-                W dniu 03.04.2024 po prowadzonym przez siebie wykładzie otwartym Pan Profesor Piotr Dybel
-                został przyjęty w poczet Członków Honorowych w Polskim Towarzystwie Psychoanalitycznym.
-              </p>
-              <span class="ptp-komunikat-card__date">
-                <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                środa, 03 kwietnia 2024
-              </span>
-            </article>
+              <article class="ptp-komunikat-card" role="listitem">
+                <h3 class="ptp-komunikat-card__title">Pan Profesor Paweł Dybel nowym Członkiem Honorowym w PTPa</h3>
+                <p class="ptp-komunikat-card__desc">W dniu 03.04.2024 po prowadzonym przez siebie wykładzie otwartym Pan Profesor Piotr Dybel został przyjęty w poczet Członków Honorowych w Polskim Towarzystwie Psychoanalitycznym.</p>
+                <div class="ptp-komunikat-card__footer">
+                  <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>środa, 03 kwietnia 2024</span>
+                  <a mat-stroked-button href="#" class="ptp-komunikat-card__btn">Zobacz więcej</a>
+                </div>
+              </article>
 
-            <article class="ptp-komunikat-card" role="listitem">
-              <h3 class="ptp-komunikat-card__title">Polskie Towarzystwo przyłącza się do stanowiska Międzynarodowej grupy studiów nad antysemityzmem.</h3>
-              <p class="ptp-komunikat-card__desc">
-                Polskie Towarzystwo przyłącza się do stanowiska Międzynarodowej grupy studiów nad antysemityzmem.
-              </p>
-              <span class="ptp-komunikat-card__date">
-                <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                środa, 01 listopada 2023
-              </span>
-            </article>
+              <article class="ptp-komunikat-card" role="listitem">
+                <h3 class="ptp-komunikat-card__title">Polskie Towarzystwo przyłącza się do stanowiska Międzynarodowej grupy studiów nad antysemityzmem.</h3>
+                <p class="ptp-komunikat-card__desc">Polskie Towarzystwo przyłącza się do stanowiska Międzynarodowej grupy studiów nad antysemityzmem i wyraża sprzeciw wobec wszelkich form dyskryminacji.</p>
+                <div class="ptp-komunikat-card__footer">
+                  <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>środa, 01 listopada 2023</span>
+                  <a mat-stroked-button href="#" class="ptp-komunikat-card__btn">Zobacz więcej</a>
+                </div>
+              </article>
 
-            <article class="ptp-komunikat-card" role="listitem">
-              <h3 class="ptp-komunikat-card__title">Stanowisko stowarzyszeń zrzeszających psychoterapeutów w sprawie rozporządzenia wprowadzającego specjalizację w dziedzinie psychoterapii</h3>
-              <p class="ptp-komunikat-card__desc">
-                W związku z wejściem w życie rozporządzenia dotyczącego specjalizacji w dziedzinie psychoterapii
-                chcemy zwrócić uwagę na ryzyka i problemy z jakimi, w związku z tym faktem, będą się spotykać osoby
-                korzystające z psychoterapii oraz osoby, które jej udzielają.
-              </p>
-              <span class="ptp-komunikat-card__date">
-                <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                piątek, 30 czerwca 2023
-              </span>
-            </article>
+              <article class="ptp-komunikat-card" role="listitem">
+                <h3 class="ptp-komunikat-card__title">Stanowisko stowarzyszeń zrzeszających psychoterapeutów w sprawie specjalizacji w psychoterapii</h3>
+                <p class="ptp-komunikat-card__desc">Chcemy zwrócić uwagę na ryzyka i problemy z jakimi, w związku z nowym rozporządzeniem, będą się spotykać osoby korzystające z psychoterapii.</p>
+                <div class="ptp-komunikat-card__footer">
+                  <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>piątek, 30 czerwca 2023</span>
+                  <a mat-stroked-button href="#" class="ptp-komunikat-card__btn">Zobacz więcej</a>
+                </div>
+              </article>
 
-            <article class="ptp-komunikat-card" role="listitem">
-              <h3 class="ptp-komunikat-card__title">dr Zbigniew Sokolik</h3>
-              <p class="ptp-komunikat-card__desc">
-                Ze smutkiem i żalem informujemy, że 11 września 2022r. umarł dr Zbigniew Sokolik – nestor
-                i jeden z pionierów psychoanalizy w powojennej Polsce, członek honorowy Polskiego Towarzystwa
-                Psychoanalitycznego.
-              </p>
-              <span class="ptp-komunikat-card__date">
-                <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                niedziela, 11 września 2022
-              </span>
-            </article>
+              <article class="ptp-komunikat-card" role="listitem">
+                <h3 class="ptp-komunikat-card__title">dr Zbigniew Sokolik</h3>
+                <p class="ptp-komunikat-card__desc">Ze smutkiem i żalem informujemy, że umarł dr Zbigniew Sokolik – nestor i jeden z pionierów psychoanalizy w powojennej Polsce, członek honorowy PTPa.</p>
+                <div class="ptp-komunikat-card__footer">
+                  <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>niedziela, 11 września 2022</span>
+                  <a mat-stroked-button href="#" class="ptp-komunikat-card__btn">Zobacz więcej</a>
+                </div>
+              </article>
 
+              <article class="ptp-komunikat-card" role="listitem">
+                <h3 class="ptp-komunikat-card__title">Zmiany w zarządzie Polskiego Towarzystwa Psychoanalitycznego</h3>
+                <p class="ptp-komunikat-card__desc">Informujemy, że na ostatnim Walnym Zebraniu Członków PTPa dokonano wyboru nowych władz Towarzystwa na kadencję 2024–2027.</p>
+                <div class="ptp-komunikat-card__footer">
+                  <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>poniedziałek, 12 lutego 2024</span>
+                  <a mat-stroked-button href="#" class="ptp-komunikat-card__btn">Zobacz więcej</a>
+                </div>
+              </article>
+
+              <article class="ptp-komunikat-card" role="listitem">
+                <h3 class="ptp-komunikat-card__title">Wyniki wyborów do Komitetu Naukowego PTPa</h3>
+                <p class="ptp-komunikat-card__desc">Podajemy do wiadomości wyniki wyborów uzupełniających do Komitetu Naukowego Polskiego Towarzystwa Psychoanalitycznego przeprowadzonych w styczniu 2024.</p>
+                <div class="ptp-komunikat-card__footer">
+                  <span class="ptp-meta-item"><mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>czwartek, 25 stycznia 2024</span>
+                  <a mat-stroked-button href="#" class="ptp-komunikat-card__btn">Zobacz więcej</a>
+                </div>
+              </article>
+
+            </div>
           </div>
 
-          <!-- Pagination arrows -->
-          <div class="ptp-pagination" aria-label="Nawigacja stron">
-            <button mat-icon-button aria-label="Poprzednia strona">
+          <div class="ptp-carousel-nav">
+            <button mat-icon-button aria-label="Poprzednie" (click)="scrollCarousel('komunikatyCarousel', 'prev')">
               <mat-icon>chevron_left</mat-icon>
             </button>
-            <button mat-icon-button aria-label="Następna strona">
+            <button mat-icon-button aria-label="Następne" (click)="scrollCarousel('komunikatyCarousel', 'next')">
               <mat-icon>chevron_right</mat-icon>
             </button>
           </div>
@@ -250,7 +501,7 @@
       </section>
 
       <!-- ───────── JAK ZOSTAĆ PSYCHOANALITYKIEM ───────── -->
-      <section class="ptp-section" aria-labelledby="training-heading">
+      <section class="ptp-section ptp-section--white" aria-labelledby="training-heading">
         <div class="ptp-page-container">
           <div class="ptp-section-header">
             <div>
@@ -280,15 +531,63 @@
 
           <!-- Quote -->
           <figure class="ptp-quote">
+            <span class="ptp-quote__mark" aria-hidden="true">&ldquo;</span>
             <blockquote class="ptp-quote__text">
-              <strong>Celem psychoanalizy</strong> jest zastąpienie nieuchronnego nieszczęścia zwykłą,
-              ludzką niedolą.
+              Celem psychoanalizy jest zastąpienie nieuchronnego nieszczęścia zwykłą, ludzką niedolą.
             </blockquote>
             <figcaption class="ptp-quote__attribution">
-              <div class="ptp-quote__avatar" aria-hidden="true">SF</div>
-              <cite>Sigmund Freud</cite>
+              <div class="ptp-quote__line" aria-hidden="true"></div>
+              <cite class="ptp-quote__cite">Sigmund Freud</cite>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <!-- ───────── NEWSLETTER ───────── -->
+      <section class="ptp-section ptp-newsletter" aria-labelledby="newsletter-heading">
+        <div class="ptp-page-container">
+          <div class="ptp-newsletter-inner">
+            <div class="ptp-newsletter-left">
+              <p class="ptp-newsletter__eyebrow">Newsletter</p>
+              <h2 id="newsletter-heading" class="ptp-newsletter__title">Bądź na bieżąco z psychoanalizą</h2>
+              <p class="ptp-newsletter__desc">Otrzymuj informacje o wydarzeniach, publikacjach i działalności Polskiego Towarzystwa Psychoanalitycznego.</p>
+            </div>
+            <div class="ptp-newsletter-right">
+              <form class="ptp-newsletter__form" (submit)="$event.preventDefault()" aria-label="Formularz zapisu na newsletter">
+                <input
+                  class="ptp-newsletter__input"
+                  type="email"
+                  placeholder="Twój adres email"
+                  aria-label="Adres email"
+                  autocomplete="email"
+                />
+                <button mat-flat-button type="submit" class="ptp-newsletter__btn">Zapisz się</button>
+              </form>
+              <p class="ptp-newsletter__note">Dbamy o Twoje dane zgodnie z polityką prywatności. Możesz zrezygnować w każdej chwili.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── POZNAJ SIEBIE ───────── -->
+      <section class="ptp-cta-section" aria-labelledby="cta-heading">
+        <div class="ptp-page-container">
+          <div class="ptp-cta-inner">
+            <div class="ptp-cta-left">
+              <p class="ptp-cta-eyebrow">Kontakt</p>
+              <h2 id="cta-heading" class="ptp-cta-title">Zacznij swoją<br>podróż w głąb siebie</h2>
+            </div>
+            <div class="ptp-cta-right">
+              <p class="ptp-cta-desc">
+                Skontaktuj się z nami i dowiedz się, jak psychoanaliza może Ci pomóc.
+                Nasze Towarzystwo skupia licencjonowanych psychoanalityków w całej Polsce.
+              </p>
+              <div class="ptp-cta-actions">
+                <a mat-flat-button href="#" class="ptp-cta-btn--filled">Przejdź do kontaktu</a>
+                <a mat-stroked-button href="#" class="ptp-cta-btn--outline">Znajdź psychoanalityka</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -297,23 +596,92 @@
     <!-- Footer -->
     <footer class="ptp-footer">
       <div class="ptp-page-container">
-        <div class="ptp-footer-content">
-          <div class="ptp-footer-brand">
-            <span class="ptp-logo-text ptp-logo-text--footer" aria-label="PTPa">PTP<em>a</em></span>
-            <p class="ptp-footer-tagline">Polskie Towarzystwo Psychoanalityczne</p>
+
+        <div class="ptp-footer-grid">
+
+          <!-- Brand column -->
+          <div class="ptp-footer-col ptp-footer-col--brand">
+            <img src="logo-white.svg" alt="PTPa" class="ptp-logo-img ptp-logo-img--footer" height="48">
+            <p class="ptp-footer-brand-desc">Zrzeszamy psychoanalityków i psychoterapeutów psychoanalitycznych w Polsce od 1989 roku. Jesteśmy członkiem Międzynarodowego Stowarzyszenia Psychoanalitycznego (IPA).</p>
+            <div class="ptp-footer-social">
+              <a href="https://facebook.com" class="ptp-footer-social__link" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" class="ptp-footer-social__link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+            </div>
           </div>
-          <nav class="ptp-footer-links" aria-label="Linki pomocnicze">
-            <a href="#">Towarzystwo</a>
-            <a href="#">Aktualności</a>
-            <a href="#">Psychoanaliza</a>
-            <a href="#">Szkolenie</a>
-            <a href="#">Kontakt</a>
+
+          <!-- Towarzystwo column -->
+          <div class="ptp-footer-col">
+            <h3 class="ptp-footer-col__title">Towarzystwo</h3>
+            <ul class="ptp-footer-col__list">
+              <li><a href="#">O nas</a></li>
+              <li><a href="#">Kodeks Etyczny</a></li>
+              <li><a href="#">Władze</a></li>
+              <li><a href="#">Członkowie</a></li>
+              <li><a href="#">Kandydaci</a></li>
+              <li><a href="#">Pożegnania</a></li>
+            </ul>
+          </div>
+
+          <!-- Aktualności column -->
+          <div class="ptp-footer-col">
+            <h3 class="ptp-footer-col__title">Aktualności</h3>
+            <ul class="ptp-footer-col__list">
+              <li><a href="#">Wszystkie wydarzenia</a></li>
+              <li><a href="#">Wykłady</a></li>
+              <li><a href="#">Seminaria</a></li>
+              <li><a href="#">Konferencje</a></li>
+              <li><a href="#">Komunikaty</a></li>
+              <li><a href="#">Publikacje</a></li>
+            </ul>
+            <h3 class="ptp-footer-col__title ptp-footer-col__title--spaced">Psychoanaliza</h3>
+            <ul class="ptp-footer-col__list">
+              <li><a href="#">O psychoanalizie</a></li>
+              <li><a href="#">Znajdź psychoanalityka</a></li>
+              <li><a href="#">Szkolenie</a></li>
+              <li><a href="#">Biblioteka i Media</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact column -->
+          <div class="ptp-footer-col">
+            <h3 class="ptp-footer-col__title">Kontakt</h3>
+            <address class="ptp-footer-address">
+              <div class="ptp-footer-address__row">
+                <mat-icon>location_on</mat-icon>
+                <span>ul. Hożej 26 m. 6<br>00-528 Warszawa</span>
+              </div>
+              <div class="ptp-footer-address__row">
+                <mat-icon>mail_outline</mat-icon>
+                <a href="mailto:biuro@ptpa.org.pl">biuro&#64;ptpa.org.pl</a>
+              </div>
+            </address>
+            <div class="ptp-footer-ipa">
+              <p class="ptp-footer-ipa__label">Członek</p>
+              <img src="ipa-logo.png" alt="International Psychoanalytical Association" class="ptp-footer-ipa__logo">
+            </div>
+          </div>
+
+        </div>
+
+        <mat-divider class="ptp-footer-divider"></mat-divider>
+
+        <div class="ptp-footer-bottom">
+          <p class="ptp-footer-copy">&copy; 2026 Polskie Towarzystwo Psychoanalityczne</p>
+          <nav class="ptp-footer-legal" aria-label="Informacje prawne">
+            <a href="#">Polityka prywatności</a>
+            <a href="#">RODO</a>
+            <a href="#">Dostępność</a>
           </nav>
         </div>
-        <mat-divider class="ptp-footer-divider"></mat-divider>
-        <p class="ptp-footer-copy">
-          <small>&copy; 2025 Polskie Towarzystwo Psychoanalityczne</small>
-        </p>
+
       </div>
     </footer>
 

@@ -31,4 +31,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {}
+export class App {
+  announcementVisible = true;
+
+  scrollCarousel(id: string, dir: 'prev' | 'next') {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollBy({ left: dir === 'next' ? el.clientWidth * 0.8 : -el.clientWidth * 0.8, behavior: 'smooth' });
+  }
+}
