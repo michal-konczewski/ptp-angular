@@ -114,14 +114,21 @@
             <a mat-stroked-button href="#" class="ptp-see-all-btn">Zobacz wszystkie wydarzenia</a>
           </div>
 
+          <!-- Filter chips -->
+          <mat-chip-listbox class="ptp-filter-bar" aria-label="Filtruj wydarzenia" multiple>
+            <mat-chip-option selected class="ptp-filter-chip">Wszystkie</mat-chip-option>
+            <mat-chip-option class="ptp-filter-chip">Letnia Szkoła</mat-chip-option>
+            <mat-chip-option class="ptp-filter-chip">Kursy</mat-chip-option>
+            <mat-chip-option class="ptp-filter-chip">Konferencje</mat-chip-option>
+            <mat-chip-option class="ptp-filter-chip">Warsztaty</mat-chip-option>
+          </mat-chip-listbox>
+
           <div class="ptp-event-grid" role="list">
 
             <article class="ptp-event-card" role="listitem">
               <div class="ptp-event-card__image ptp-event-card__image--1" aria-hidden="true"></div>
               <div class="ptp-event-card__body">
-                <mat-chip-set>
-                  <mat-chip class="ptp-chip--primary">Letnia Szkoła Psychoanalizy</mat-chip>
-                </mat-chip-set>
+                <span class="ptp-label ptp-label--rose">Letnia Szkoła Psychoanalizy</span>
                 <h3 class="ptp-event-card__title">Ciało, Seksualność, Sztuczna Doskonałość</h3>
                 <p class="ptp-event-card__desc">
                   Polskie Towarzystwo Psychoanalityczne zaprasza na III edycję Letniej Szkoły Psychoanalizy,
@@ -130,7 +137,7 @@
                 <div class="ptp-event-card__meta">
                   <span class="ptp-meta-item">
                     <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                    piątek, 18 września 2026 – niedziela, 20 września 2026
+                    18–20 września 2026
                   </span>
                   <span class="ptp-meta-item">
                     <mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>
@@ -143,9 +150,7 @@
             <article class="ptp-event-card" role="listitem">
               <div class="ptp-event-card__image ptp-event-card__image--2" aria-hidden="true"></div>
               <div class="ptp-event-card__body">
-                <mat-chip-set>
-                  <mat-chip class="ptp-chip--secondary">Kurs</mat-chip>
-                </mat-chip-set>
+                <span class="ptp-label ptp-label--sage">Kurs</span>
                 <h3 class="ptp-event-card__title">Jak powstaje życie psychiczne. Podstawowe idee Melanie Klein.</h3>
                 <p class="ptp-event-card__desc">
                   Chcemy zaprosić Państwa do wspólnej podróży, podczas której poznawać będziemy teorię
@@ -154,7 +159,7 @@
                 <div class="ptp-event-card__meta">
                   <span class="ptp-meta-item">
                     <mat-icon class="ptp-meta-icon" aria-hidden="true">calendar_today</mat-icon>
-                    sobota, 03 października 2026
+                    03 października 2026
                   </span>
                   <span class="ptp-meta-item">
                     <mat-icon class="ptp-meta-icon" aria-hidden="true">location_on</mat-icon>

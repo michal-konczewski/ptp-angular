@@ -359,15 +359,77 @@
   height: 14px !important;
 }
 
-// Chips
-.ptp-chip--primary {
-  --mdc-chip-elevated-container-color: var(--mat-sys-primary) !important;
-  --mdc-chip-label-text-color: var(--mat-sys-on-primary) !important;
+// ---- Category label spans (replace mat-chip for event card tags) ----
+
+.ptp-label {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: fit-content;
+
+  &--rose {
+    background: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
+  }
+
+  &--sage {
+    background: var(--mat-sys-tertiary-container);
+    color: var(--mat-sys-on-tertiary-container);
+  }
+
+  &--taupe {
+    background: var(--mat-sys-secondary-container);
+    color: var(--mat-sys-on-secondary-container);
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--mat-sys-primary);
+    border: 1.5px solid var(--mat-sys-primary);
+  }
 }
 
-.ptp-chip--secondary {
-  --mdc-chip-elevated-container-color: var(--mat-sys-secondary-container) !important;
-  --mdc-chip-label-text-color: var(--mat-sys-on-secondary-container) !important;
+// ---- Filter chips (mat-chip-listbox / mat-chip-option) ----
+
+.ptp-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+
+  // Override Angular Material chip-listbox layout
+  .mat-mdc-chip-set-stacked,
+  .mdc-evolution-chip-set__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.ptp-filter-chip {
+  --mdc-chip-container-shape-radius: 100px;
+  --mdc-chip-container-height: 36px;
+  --mdc-chip-elevated-container-color: var(--mat-sys-surface-container-lowest);
+  --mdc-chip-label-text-color: var(--mat-sys-on-surface-variant);
+  --mdc-chip-label-text-size: 14px;
+  --mdc-chip-label-text-weight: 500;
+  --mdc-chip-outline-color: var(--mat-sys-outline-variant);
+  --mdc-chip-outline-width: 1px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  transition: all 150ms ease;
+
+  &.mat-mdc-chip-selected,
+  &[aria-selected="true"] {
+    --mdc-chip-elevated-selected-container-color: var(--mat-sys-primary);
+    --mdc-chip-selected-label-text-color: var(--mat-sys-on-primary);
+    border-color: transparent;
+  }
 }
 
 // ============================================================
@@ -400,9 +462,9 @@
 
 .ptp-komunikat-card__title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.35;
   color: var(--mat-sys-on-surface);
   margin: 0;
 }
